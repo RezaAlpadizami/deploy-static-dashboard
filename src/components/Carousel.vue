@@ -12,15 +12,15 @@ const { datas } = defineProps(["datas"]);
         <img
           :src="data.url"
           alt="images"
-          class="w-full xl:w-full lg:w-full md:w-full md:h-full"
+          class="w-full xl:w-full lg:w-full md:w-full md:h-full sm:h-full min-[320px]:min-h-[310px]"
           />
           <div
             class="absolute 2xl:w-full xl:w-full lg:w-full md:w-full min-[320px]:w-full min-[320px]:bottom-0 w-full lg:-bottom-0 md:-bottom-2 sm:-bottom-1 text-left"
           >
-            <div class="bg-[rgb(0,0,0,0.5)] px-8 py-8 md:py-4 sm:py-2 min-[320px]:py-4 text-white">
-              <p class="text-xs leading-none">{{ data.date }}</p>
+            <div class="bg-[rgb(0,0,0,0.5)] px-8 py-8 md:py-6 sm:py-4 min-[320px]:py-4 text-white">
+              <p class="text-xs leading-none mb-3">{{ data.date }}</p>
               <h1
-                class="text-2xl lg:text-[18px] md:text-[14px] sm:text-[12px] font-semibold"
+                class="lg:text-[18px] md:text-[18px] sm:text-[15px] min-[320px]:text-[12px] font-semibold leading-3"
               >
                 {{ data.title }}
               </h1>

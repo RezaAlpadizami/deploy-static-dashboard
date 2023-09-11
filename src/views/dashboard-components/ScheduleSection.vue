@@ -5,7 +5,7 @@ import AddCard from "../../components/AddCard.vue";
 </script>
 
 <template>
-  <div class="bg-blue-200 pt-10" id="schedule-section">
+  <div class="bg-blue-200 pt-10 xl:pb-0 lg:pb-0 md:pb-2 sm:pb-4 min-[320px]:pb-20 " id="schedule-section">
     <div class="flex flex-wrap xl:gap-12 lg:gap-8 md:gap-6 sm:gap-4 min-[320px]:gap-4 lg:mx-3 justify-center align-middle">
       <CardInformation type="agenda">
         <template #header-card>
@@ -39,7 +39,7 @@ import AddCard from "../../components/AddCard.vue";
           </div>
         </template>
         <template #button-card>
-          <div class="px-3 bg-white text-center pb-2 w-full">
+          <div class="px-3 bg-white text-center pb-2 w-full cursor-pointer">
             <p class="text-[14px] text-blue-800 font-semibold">View More</p>
           </div>
         </template>
@@ -110,24 +110,25 @@ import AddCard from "../../components/AddCard.vue";
         </div>
       </div>
     </div>
-    <div class="flex gap-4 md:gap-0 justify-center align-middle">
+    <div class="flex gap-4 md:gap-0 justify-center align-middle flex-nowrap lg:flex-nowrap md:flex-nowrap sm:flex-nowrap min-[320px]:flex-wrap">
       <img
         src="../../assets/images/discussion_illus.png"
         alt="png"
-        class="w-62"
+        class="max-w-full 2xl:max-w-full xl:max-w-full min-[320px]:max-w-[50%]"
       />
-      <div class="flex gap-4">
-        <div class="flex flex-col text-right text-blue-900 justify-center mt-8">
-          <h4 class="font-bold text-2xl xl:leading-6 md:leading-4 sm:leading-4 lg:text-xl md:text-[16px] sm:text-[14px]">Bagikan Ceritamu di Danone</h4>
-          <p class="md:text-[12px] sm:text-[10px]">Dengan #BersamaDiDanone #BanggaKerjaDiDanone</p>
+      <div class="flex gap-4 mt-0 xl:mt-0 lg:mt-0 md:mt-0 sm:mt-0 min-[320px]:-mt-16">
+        <div class="flex flex-col text-right text-blue-900 justify-center mt-8 w-full 2xl:w-full xl:w-full lg:w-full md:w-full sm:w-[200px]">
+          <h4 class="font-bold text-2xl xl:leading-6 md:leading-4 sm:leading-4 lg:text-xl md:text-[16px] sm:text-[14px] min-[320px]:text-[16px]">Bagikan Ceritamu di Danone</h4>
+          <p class="md:text-[12px] sm:text-[10px] min-[320px]:text-[12px]">Dengan #BersamaDiDanone #BanggaKerjaDiDanone</p>
         </div>
         <button
-          class="border-none bg-blue-500 px-8 py-2 lg:py-2 lg:px-8 md:px-4 sm:px-2 md:text-xs sm:text-xs  text-white self-center mt-9 rounded-md"
+          class="border-none bg-blue-500 px-8 py-2 lg:py-2 lg:px-8 md:px-4 sm:px-2 min-[320px]:px-0 md:text-xs sm:text-xs min-[320px]:text-[10px]  text-white self-center mt-9 rounded-md w-[160px] xl:w-[160px] lg:w-[160px] md:w-[125px] sm:w-[100px] mr-0 xl:mr-0 lg:mr-0 md:mr-0 sm:mr-0 min-[320px]:mr-4"
         >
           Share Cerita
         </button>
       </div>
     </div>
   </div>
+  
   <ListLink />
 </template>

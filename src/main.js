@@ -14,7 +14,6 @@ import {
   faMailBulk,
 } from "@fortawesome/free-solid-svg-icons";
 import { faBell } from "@fortawesome/free-regular-svg-icons";
-
 import { createApp } from "vue";
 import App from "./App.vue";
 

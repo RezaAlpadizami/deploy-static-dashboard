@@ -2,9 +2,9 @@
 import { ref, onMounted } from "vue";
 import { useAnnouncementStore } from "../store/AnnouncementStore";
 
-let announcement = useAnnouncementStore()
+let announcement = useAnnouncementStore();
 const activeItem = ref("dashboard");
-const isSearchVisible = ref(false)
+const isSearchVisible = ref(false);
 
 const menuItems = [
   {
@@ -54,8 +54,8 @@ const setActiveItem = (itemId) => {
 };
 
 const handleClickSearch = () => {
-  isSearchVisible.value = !isSearchVisible.value
-}
+  isSearchVisible.value = !isSearchVisible.value;
+};
 
 const scrollToSection = (sectionId) => {
   const section = document.getElementById(sectionId);
@@ -198,7 +198,9 @@ onMounted(() => {
                   v-if="menuItem.id === 'pengumuman'"
                   class="px-[6px] py-[2px] absolute -top-4 -right-4 rounded-md bg-red-500"
                 >
-                  <p class="text-[10px] text-white">{{ announcement.announcement.length }}</p>
+                  <p class="text-[10px] text-white">
+                    {{ announcement.announcement.length }}
+                  </p>
                 </div>
               </a>
             </li>
@@ -222,15 +224,46 @@ onMounted(() => {
               </div>
             </li>
             <li v-if="isSearchVisible === false">
-              <a
+              <button
+                data-popover-target="popover-bottom"
+                data-popover-placement="bottom"
+                type="button"
+                class="text-white focus:ring-4 font-medium rounded-lg text-sm px-2 py-2 text-center"
+              >
+              <font-awesome-icon
+                  :icon="['far', 'bell']"
+                  class="text-gray-400 w-5 h-5"
+                />
+              </button>
+              <div
+                data-popover
+                id="popover-bottom"
+                role="tooltip"
+                class="absolute z-10 invisible inline-block w-64 text-sm text-gray-500 transition-opacity duration-300 bg-white border border-gray-200 rounded-lg shadow-sm opacity-0 dark:text-gray-400 dark:border-gray-600 dark:bg-gray-800"
+              >
+                <div
+                  class="px-3 py-2 bg-gray-100 border-b border-gray-200 rounded-t-lg dark:border-gray-600 dark:bg-gray-700"
+                >
+                  <h3 class="font-semibold text-gray-900 dark:text-white">
+                    Notifications
+                  </h3>
+                </div>
+                <div class="px-3 py-2">
+                  <p>
+                    You don't have any notifications at this time
+                  </p>
+                </div>
+                <div data-popper-arrow></div>
+              </div>
+              <!-- <a
                 href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200"
               >
                 <font-awesome-icon
                   :icon="['far', 'bell']"
                   class="text-gray-400 w-5 h-5"
                 />
-              </a>
+              </a> -->
             </li>
             <li v-if="isSearchVisible === false">
               <a

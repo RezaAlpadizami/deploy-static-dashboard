@@ -1,12 +1,12 @@
 <script setup>
-const { listData, type} = defineProps([
-  "listData",
-  "type",
-]);
+const { listData, type } = defineProps(["listData", "type"]);
 </script>
 
 <template>
-  <div class="flex gap-6 justify-between px-3 py-2 w-full" v-for="data in listData">
+  <div
+    class="flex gap-6 justify-between px-3 py-2 w-full"
+    v-for="data in listData"
+  >
     <div class="grid grid-cols-3">
       <div class="flex flex-col justify- align-top">
         <div
@@ -18,7 +18,7 @@ const { listData, type} = defineProps([
         </div>
         <img
           v-else
-          :src="data.imgProfile"
+          :src="'/src/assets/images/' + data.imgProfile"
           alt="img-profile"
           :class="
             type === 'annount'
@@ -41,8 +41,12 @@ const { listData, type} = defineProps([
       </div>
       <div v-if="type === 'annount'" class="flex flex-col col-span-2 -ml-16">
         <div class="flex justify-between">
-          <p class="xl:text-[10px] lg:text-[8px] min-[320px]:text-[8px]">{{ data.name }}</p>
-          <p class="xl:text-[8px] lg:text-[6px] min-[320px]:text-[6px]">{{ data.date }}</p>
+          <p class="xl:text-[10px] lg:text-[8px] min-[320px]:text-[8px]">
+            {{ data.name }}
+          </p>
+          <p class="xl:text-[8px] lg:text-[6px] min-[320px]:text-[6px]">
+            {{ data.date }}
+          </p>
         </div>
         <div>
           <h3
@@ -50,7 +54,9 @@ const { listData, type} = defineProps([
           >
             {{ data.titleAnnouncement }}
           </h3>
-          <p class="text-[10px] xl:text-[10px] min-[320px]:text-[10px] lg:text-[8px] text-gray-500 min-w-[270px]">
+          <p
+            class="text-[10px] xl:text-[10px] min-[320px]:text-[10px] lg:text-[8px] text-gray-500 min-w-[270px]"
+          >
             {{ data.message }}
           </p>
         </div>

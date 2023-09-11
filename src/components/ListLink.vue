@@ -5,12 +5,12 @@
     <div class="text-center">
       <h6 class="text-gray-400">OUR FAMILY LINK</h6>
     </div>
-    <div class="flex flex-wrap gap-28 justify-center align-middle">
-      <a href="https://nutricia.co.id/" target="_blank">
+    <div class="flex flex-wrap gap-28 justify-center align-middle mt-3">
+      <a href="https://nutricia.co.id/" target="_blank" class="flex items-center">
         <img
-          src="https://nutricia.co.id/uploads/pics/Logo-Nutricia.jpg"
+          src="https://nutricia.co.id/fileadmin/templates/currtheme/html/img/logo.png"
           alt="nutricia"
-          class="w-32"
+          class="w-20"
         />
       </a>
       <a href="https://www.minumvit.co.id/" target="_blank">
@@ -34,14 +34,14 @@
           class="w-20"
         />
       </a>
-      <a href="https://www.minumvit.co.id/" target="_blank">
+      <a href="https://www.minumvit.co.id/" target="_blank" class="flex items-center">
         <img
           src="https://logolook.net/wp-content/uploads/2021/01/Silk-Logo-1996.png"
           alt="nutricia"
           class="w-20"
         />
       </a>
-      <a href="http://oikosperkasa.co.id/" target="_blank">
+      <a href="http://oikosperkasa.co.id/" target="_blank" class="flex items-center">
         <img
           src="https://logos-world.net/wp-content/uploads/2021/08/Oikos-Logo.png"
           alt="nutricia"
