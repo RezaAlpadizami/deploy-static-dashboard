@@ -18,7 +18,7 @@ const { listData, type } = defineProps(["listData", "type"]);
         </div>
         <img
           v-else
-          :src="'/src/assets/images/' + data.imgProfile"
+          :src="`/src/assets/images/${data.imgProfile}`"
           alt="img-profile"
           :class="
             type === 'annount'
