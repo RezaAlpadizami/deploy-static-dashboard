@@ -41,7 +41,7 @@ const breakpoints = reactive({
       <div class="carousel__item mx-2">
         <div class="bg-white p-4 rounded-lg">
           <div class="flex text-gray-500 gap-4 my-3">
-            <img :src="slide.icons" alt="icons" class="w-12 h-12" />
+            <img :src="`/images/${slide.icons}`" alt="icons" class="w-12 h-12" />
             <p class="text-left font-semibold">{{ slide.name }}</p>
           </div>
           <div class="border-[1px] -mx-4"></div>
