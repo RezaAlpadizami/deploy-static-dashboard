@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "imgProfile": "/src/assets/images/profile4.jpeg",
+    "titleAnnouncement": "Terima kasih kerjasamanyaa",
+    "name": "Ardiansyah, Nutricia"
+  },
+  {
+    "id": 2,
+    "imgProfile": "/src/assets/images/profile4.jpeg",
+    "titleAnnouncement": "Suka dengan presentasi tadi siang",
+    "name": "Ardiansyah, Nutricia"
+  },
+  {
+    "id": 3,
+    "imgProfile": "/src/assets/images/profile4.jpeg",
+    "titleAnnouncement": "Terimakasih feedbacknya akan kami kerjakan secepatnya",
+    "name": "Ardiansyah, Nutricia"
+  },
+  {
+    "id": 4,
+    "imgProfile": "/src/assets/images/profile4.jpeg",
+    "titleAnnouncement": "Terimakasih feedbacknya akan kami kerjakan secepatnya",
+    "name": "Ardiansyah, Nutricia"
+  },
+  {
+    "id": 5,
+    "imgProfile": "/src/assets/images/profile4.jpeg",
+    "titleAnnouncement": "Terimakasih feedbacknya akan kami kerjakan secepatnya",
+    "name": "Ardiansyah, Nutricia"
+  },
+  {
+    "id": 6,
+    "imgProfile": "/src/assets/images/profile4.jpeg",
+    "titleAnnouncement": "Terimakasih feedbacknya akan kami kerjakan secepatnya",
+    "name": "Ardiansyah, Nutricia"
+  }
+]
