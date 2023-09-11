@@ -1,6 +1,9 @@
 <script setup>
 import { ref, onMounted } from "vue";
 import { useAnnouncementStore } from "../store/AnnouncementStore";
+import { initFlowbite } from "flowbite";
+
+
 
 let announcement = useAnnouncementStore();
 const activeItem = ref("dashboard");
@@ -65,6 +68,8 @@ const scrollToSection = (sectionId) => {
 };
 
 onMounted(() => {
+  initFlowbite();
+
   const anchorLinks = document.querySelectorAll(".scroll-to-section");
   anchorLinks.forEach((anchorLink) => {
     anchorLink.addEventListener("click", (event) => {
