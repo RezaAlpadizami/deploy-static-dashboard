@@ -122,32 +122,25 @@ onMounted(() => {
                 >Testing@gmail.com</span
               >
             </div>
-            <ul class="py-2 flex flex-col" aria-labelledby="user-menu-button">
+            <ul class="flex flex-col [&>*]:py-2" aria-labelledby="user-menu-button">
               <li>
                 <RouterLink
                   to="/"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  class="block px-4 text-sm text-gray-700 hover:text-blue-400"
                   >Dashboard</RouterLink
                 >
               </li>
               <li>
                 <RouterLink
                   to="/"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  class="block px-4 text-sm text-gray-700 hover:text-blue-400"
                   >Settings</RouterLink
                 >
               </li>
-              <li>
+              <li class="opacity-60 rounded-b-md">
                 <RouterLink
                   to="/"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
-                  >Earnings</RouterLink
-                >
-              </li>
-              <li>
-                <RouterLink
-                  to="/"
-                  class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                  class="block px-4 text-sm text-gray-700 hover:text-blue-400"
                   >Sign out</RouterLink
                 >
               </li>
