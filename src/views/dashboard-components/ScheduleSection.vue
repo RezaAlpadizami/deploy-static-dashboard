@@ -2,12 +2,19 @@
 import CardInformation from "../../components/CardInformation.vue";
 import ListLink from "../../components/ListLink.vue";
 import AddCard from "../../components/AddCard.vue";
+import { ref } from "vue";
+
+const isViewMore = ref(false)
+
+const handleViewMore = () => {
+  isViewMore.value = !isViewMore.value
+}
 </script>
 
 <template>
   <div class="bg-blue-200 pt-10 xl:pb-0 lg:pb-0 md:pb-2 sm:pb-4 min-[320px]:pb-20 " id="schedule-section">
     <div class="flex flex-wrap xl:gap-12 lg:gap-8 md:gap-6 sm:gap-4 min-[320px]:gap-4 lg:mx-3 justify-center align-middle">
-      <CardInformation type="agenda">
+      <CardInformation type="agenda" :view-more="isViewMore">
         <template #header-card>
           <div
             class="flex gap-6 justify-between px-3 py-2 bg-gray-200 w-[340px]"
@@ -39,7 +46,7 @@ import AddCard from "../../components/AddCard.vue";
           </div>
         </template>
         <template #button-card>
-          <div class="px-3 bg-white text-center pb-2 w-full cursor-pointer">
+          <div class="px-3 bg-white text-center pb-2 w-full cursor-pointer" :onclick="handleViewMore">
             <p class="text-[14px] text-blue-800 font-semibold">View More</p>
           </div>
         </template>
@@ -76,7 +83,7 @@ import AddCard from "../../components/AddCard.vue";
           </div>
         </template>
       </CardInformation>
-      <div class="bg-blue-500 min-h-[405px] max-w-[340px] relative">
+      <div class="bg-blue-500 max-h-[405px] max-w-[340px] relative">
         <div
           class="flex flex-col p-4 text-right justify-end items-end gap-3 text-white"
         >

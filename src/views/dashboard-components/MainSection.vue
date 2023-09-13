@@ -60,7 +60,7 @@ const images = [
           </div>
         </template>
         <template #button-card>
-          <div class="px-3 bg-white w-full text-center pb-2 cursor-pointer">
+          <div class="px-3 bg-white w-full text-center pb-2 cursor-pointer" v-if="announcement.announcement.length > 3">
             <p class="text-[14px] text-blue-800 font-semibold">
               Lihat Semua Pengumuman
             </p>
