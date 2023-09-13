@@ -7,6 +7,8 @@ let announcement = useAnnouncementStore();
 const activeItem = ref("dashboard");
 const isSearchVisible = ref(false);
 
+console.log('length',activeItem.value.length)
+
 const menuItems = [
   {
     id: "dashboard",
@@ -187,7 +189,7 @@ onMounted(() => {
                 href="#"
                 class="scroll-to-section relative block h-full xl:mt-6 lg:mt-3 2xl:text-[14px] xl:text-xs lg:text-xs"
                 :class="{
-                  'text-blue-700 border-b-4 border-blue-700 px-2':
+                  'text-blue-700 px-2':
                     activeItem === menuItem.id,
                   'text-gray-900 mx-2 hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700':
                     activeItem !== menuItem.id,
@@ -205,6 +207,8 @@ onMounted(() => {
                   </p>
                 </div>
               </a>
+              <div v-if="activeItem === menuItem.id" :class="`${activeItem.length < 7 ? 'md:w-14 w-20 lg:w-14' : 'w-20'} h-1 bg-blue-700 bottom-0 rounded-md absolute`">
+              </div>
             </li>
             <li>
               <a
