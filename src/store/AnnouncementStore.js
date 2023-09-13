@@ -8,8 +8,12 @@ export let useAnnouncementStore = defineStore("announcement", {
 
   actions: {
     async fill() {
-      let res = await import("@/data/announcement.json");
-      this.$state = res.default;
+      try {
+        let res = await import("@/data/announcement.json");
+        this.$state = res.default;
+      } catch (error) {
+        console.log("error", error);
+      }
     },
   },
 });

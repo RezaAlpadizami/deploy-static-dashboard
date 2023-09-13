@@ -3,8 +3,6 @@ import { ref, onMounted } from "vue";
 import { useAnnouncementStore } from "../store/AnnouncementStore";
 import { initFlowbite } from "flowbite";
 
-
-
 let announcement = useAnnouncementStore();
 const activeItem = ref("dashboard");
 const isSearchVisible = ref(false);
@@ -84,7 +82,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <nav class="bg-white border-gray-200 dark:bg-gray-900 drop-shadow-md">
+  <nav class="bg-white border-gray-200 dark:bg-gray-900 drop-shadow-md relative z-10">
     <div class="flex justify-between mx-4">
       <RouterLink to="/" class="flex items-center">
         <img
@@ -96,26 +94,32 @@ onMounted(() => {
       <div class="max-w-screen-2xl flex flex-wrap items-center justify-end">
         <div class="flex items-center lg:order-2 mr-4">
           <button
+            
             type="button"
-            class="flex mr-4 text-sm bg-gray-800 rounded-full lg:mr-0 focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+            :class="`flex mx-6 text-sm bg-gray-800 rounded-full lg:mr-0 ${isSearchVisible ? 'hidden' : ''}`"
             id="user-menu-button"
             aria-expanded="false"
             data-dropdown-toggle="user-dropdown"
             data-dropdown-placement="bottom"
           >
             <span class="sr-only">Open user menu</span>
+            <img
+              class="w-8 h-8 rounded-full"
+              src="../assets/images/profile1.jpg"
+              alt="user photo"
+            />
           </button>
           <div
             class="z-50 hidden my-4 text-base list-none bg-white divide-y divide-gray-100 rounded-lg shadow dark:bg-gray-700 dark:divide-gray-600"
             id="user-dropdown"
           >
-            <div class="px-4 py-3">
+            <div class="px-4 py-3 bg-blue-400 bg-opacity-40 rounded-t-md font-semibold">
               <span class="block text-sm text-gray-900 dark:text-white"
-                >Bonnie Green</span
+                >Testing User</span
               >
               <span
                 class="block text-sm text-gray-500 truncate dark:text-gray-400"
-                >name@flowbite.com</span
+                >Testing@gmail.com</span
               >
             </div>
             <ul class="py-2 flex flex-col" aria-labelledby="user-menu-button">
@@ -188,7 +192,7 @@ onMounted(() => {
             >
               <a
                 href="#"
-                class="scroll-to-section relative block h-full xl:mt-6 lg:mt-2 2xl:text-[14px] xl:text-xs lg:text-xs"
+                class="scroll-to-section relative block h-full xl:mt-6 lg:mt-3 2xl:text-[14px] xl:text-xs lg:text-xs"
                 :class="{
                   'text-blue-700 border-b-4 border-blue-700 px-2':
                     activeItem === menuItem.id,
@@ -235,7 +239,7 @@ onMounted(() => {
                 type="button"
                 class="text-white font-medium rounded-lg text-sm px-2 py-2 mt-2 text-center"
               >
-              <font-awesome-icon
+                <font-awesome-icon
                   :icon="['far', 'bell']"
                   class="text-gray-400 w-5 h-5"
                 />
@@ -254,9 +258,7 @@ onMounted(() => {
                   </h3>
                 </div>
                 <div class="px-3 py-2">
-                  <p>
-                    You don't have any notifications at this time
-                  </p>
+                  <p>You don't have any notifications at this time</p>
                 </div>
                 <div data-popper-arrow></div>
               </div>
@@ -270,18 +272,15 @@ onMounted(() => {
                 />
               </a> -->
             </li>
-            <li v-if="isSearchVisible === false">
-              <a
-                href="#"
-                class="block px-4 py-2 text-sm text-gray-700"
-              >
+            <!-- <li v-if="isSearchVisible === false">
+              <a href="#" class="block px-4 py-2 text-sm text-gray-700">
                 <img
                   class="w-10 h-10 rounded-full"
                   src="../assets/images/profile1.jpg"
                   alt="user photo"
                 />
               </a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
