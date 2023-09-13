@@ -207,7 +207,7 @@ onMounted(() => {
                   </p>
                 </div>
               </a>
-              <div v-if="activeItem === menuItem.id" :class="`${activeItem.length < 7 ? 'md:w-14 w-20 lg:w-14' : 'w-20'} h-1 bg-blue-700 bottom-0 rounded-md absolute`">
+              <div v-if="activeItem === menuItem.id" :class="`${activeItem.length < 7 ? 'md:w-14 lg:w-12 xl:w-14' : 'lg:w-20 xl:w-24'} h-1 bg-blue-700 bottom-0 rounded-md absolute`">
               </div>
             </li>
             <li>
