@@ -118,7 +118,7 @@ onMounted(() => {
                 >name@flowbite.com</span
               >
             </div>
-            <ul class="py-2" aria-labelledby="user-menu-button">
+            <ul class="py-2 flex flex-col" aria-labelledby="user-menu-button">
               <li>
                 <RouterLink
                   to="/"
@@ -149,8 +149,8 @@ onMounted(() => {
               </li>
             </ul>
           </div>
+          <!-- data-collapse-toggle="navbar-user" -->
           <button
-            data-collapse-toggle="navbar-user"
             type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
             aria-controls="navbar-user"
@@ -212,7 +212,7 @@ onMounted(() => {
             <li>
               <a
                 href="#"
-                class="block px-4 py-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:text-white"
+                class="block px-4 py-2 mt-2 text-sm text-gray-700 dark:text-gray-200 dark:hover:text-white"
               >
                 <font-awesome-icon
                   :icon="['fa', 'magnifying-glass']"
@@ -220,20 +220,20 @@ onMounted(() => {
                   @click="handleClickSearch()"
                 />
               </a>
-              <div v-if="isSearchVisible">
+              <div v-if="isSearchVisible" class="mt-2">
                 <input
                   type="text"
-                  class="border border-gray-200 px-2 py-1 rounded-md"
+                  class="border border-gray-200 px-2 py-1 rounded-md max-w-40 xl:w-40 lg:w-32"
                   placeholder="Search"
                 />
               </div>
             </li>
-            <li v-if="isSearchVisible === false">
+            <li>
               <button
                 data-popover-target="popover-bottom"
                 data-popover-placement="bottom"
                 type="button"
-                class="text-white focus:ring-4 font-medium rounded-lg text-sm px-2 py-2 text-center"
+                class="text-white font-medium rounded-lg text-sm px-2 py-2 mt-2 text-center"
               >
               <font-awesome-icon
                   :icon="['far', 'bell']"
@@ -273,7 +273,7 @@ onMounted(() => {
             <li v-if="isSearchVisible === false">
               <a
                 href="#"
-                class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 dark:text-gray-200 dark:hover:text-white"
+                class="block px-4 py-2 text-sm text-gray-700"
               >
                 <img
                   class="w-10 h-10 rounded-full"
