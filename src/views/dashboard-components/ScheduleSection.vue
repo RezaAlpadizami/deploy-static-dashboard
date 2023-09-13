@@ -83,7 +83,7 @@ const handleViewMore = () => {
           </div>
         </template>
       </CardInformation>
-      <div class="bg-blue-500 max-h-[405px] max-w-[340px] relative">
+      <div class="bg-blue-500 max-h-[405px] min-h-[400px] max-w-[340px] relative">
         <div
           class="flex flex-col p-4 text-right justify-end items-end gap-3 text-white"
         >
