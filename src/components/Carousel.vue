@@ -12,7 +12,7 @@ const { datas } = defineProps(["datas"]);
         <img
           :src="data.url"
           alt="images"
-          class="w-full xl:w-full lg:w-full md:w-full md:h-full sm:h-full min-[320px]:min-h-[310px]"
+          class="w-full xl:w-full lg:w-full md:w-full md:h-full sm:h-full min-[320px]:min-h-[250px]"
           />
           <div
             class="absolute 2xl:w-full xl:w-full lg:w-full md:w-full min-[320px]:w-full min-[320px]:bottom-0 w-full lg:-bottom-0 md:-bottom-2 sm:-bottom-1 text-left"

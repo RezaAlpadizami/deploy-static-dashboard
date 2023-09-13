@@ -22,7 +22,7 @@ const images = [
     id: 3,
     date: "Sun 8 Ags  2023",
     title: "5 Cara Agar Tahun Baru Makin Sehat dengan Air Mineral yang Baik",
-    url: "https://ik.imagekit.io/minumvit/storage/articles/VIT-camping-prep.jpg?tr=w-1440",
+    url: "https://ik.imagekit.io/minumvit/storage/articles/Kitchen-FA.jpg?tr=w-1440",
   },
 ];
 </script>
