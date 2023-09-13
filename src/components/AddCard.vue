@@ -40,7 +40,7 @@ const addPost = (event) => {
     }
     const newShout = {
       id: Math.floor(Math.random() * 1000000),
-      imgProfile: "/src/assets/images/profile2.jpeg",
+      imgProfile: "like.svg",
       titleAnnouncement: shout.$state.newShout,
       name: "Eric Kambuaya",
     };
