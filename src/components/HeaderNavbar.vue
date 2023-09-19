@@ -3,7 +3,7 @@
 <template>
   <nav class="border-gray-200 dark:bg-gray-900 bg-blue-700">
     <div
-      class="max-w-screen-2xl flex flex-wrap items-center justify-between mx-auto px-8   py-2"
+      class="max-w-screen-3xl flex flex-wrap items-center justify-between mx-auto px-8 py-2"
     >
       <RouterLink to="/" class="flex items-center">
         <span
