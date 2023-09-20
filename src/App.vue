@@ -3,7 +3,7 @@
 </script>
 
 <template>
-  <div class="max-w-[1720px] mx-auto">
+  <div>
     <RouterView />
   </div>
 </template>
